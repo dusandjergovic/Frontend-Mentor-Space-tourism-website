@@ -24,6 +24,7 @@ $(document).ready(function() {
 
         if(selectedRate !== null) {
             selectedRate.removeClass('active');
+            $("#bullets:first").removeClass('active')
         }
         $(this).addClass('active');
         selectedRate = $(this);
