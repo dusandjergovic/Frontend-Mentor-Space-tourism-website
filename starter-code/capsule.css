@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url(../starter-code/assets/crew/background-crew-mobile.jpg);
+    background-image: url(../starter-code/assets/technology/background-technology-mobile.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -85,9 +85,11 @@ header {
 }
 
 #close {
+    /* display: none; */
     cursor: pointer;
     position: absolute;
     right: 1rem;
+
 }
 
 #container {
@@ -109,19 +111,15 @@ header {
     color: #979797;
 }
 
-#commanderImg {
+#vehicleImg {
     border-bottom: 1px solid #979797;
-    width: 90%;
+    width: 100%;
+    height: 15rem;
     display: flex;
     justify-content: center;
-}
-
-#commanderImg img {
-    width: 10rem;
-}
-
-#container hr {
-    width: 90%;
+    background-image: url(../starter-code/assets/technology/image-space-capsule-landscape.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 #bullets {
@@ -130,32 +128,43 @@ header {
 }
 
 .miniBullet {
-    width: .55rem;
-    height: .55rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
-    background-color: #979797;
-    border: none;
+    background-color: transparent;
+    border: 1px solid #979797;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.miniBullet:hover {
+    background-color: white;
+    color: black;
 }
 
 .active {
     background-color: white !important;
+    color: black;
 }
 
-#commanderName {
+#vehicleName {
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-#commanderName h3 {
+#vehicleName h3 {
     color: #979797;
     font-size: 1rem;
     text-transform: uppercase;
     font-family: 'Bellefair', sans-serif;
 }
 
-#commanderName span {
+#vehicleName span {
     color: white;
     font-size: 2rem;
     text-transform: uppercase;
@@ -168,36 +177,4 @@ header {
     font-family: 'Barlow', sans-serif;
     line-height: 1.75;
     width: 80%;
-}
-
-@media only screen and (min-width: 900px) {
-    #container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        margin-top: -2rem;
-        width: 80%;
-        height: 80%;
-        margin: auto;
-        gap: 3rem;
-        justify-items: start;
-        align-items: end;
-    }
-    #commanderImg {
-        grid-row: 1 / 4;
-        grid-column: 2 / 3;
-        border-bottom: none;
-    }
-    #commanderName {
-        grid-row: 2 / 3;
-        grid-column: 1 / 2;
-        align-items: flex-start;
-        width: 85%;
-    }
-    .bio {
-        width: 100%;
-        text-align: left;
-    }
-    #commanderImg img {
-        width: 80%;
-    }
 }

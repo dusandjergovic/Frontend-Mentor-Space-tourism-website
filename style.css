@@ -18,13 +18,73 @@ body {
 }
 
 header {
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
     height: 10vh;
     z-index: 2;
+    position: relative;
+}
+
+#navLine {
+    width: 40%;
+    height: .025rem;
+    background-color: grey;
+    position: absolute;
+    left: 8rem;
+    display: none;
+}
+
+#navForTabletAndDesktop {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 2rem;
+    background-color: rgb(0, 0, 0, 0.2);
+    max-width: 55%;
+}
+
+#navForTabletAndDesktop ul{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+#navForTabletAndDesktop ul li {
+    list-style-type: none;
+}
+
+#navForTabletAndDesktop ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    height: 10rem;
+}
+
+#navForTabletAndDesktop ul li a:hover::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.2rem;
+    background-color: white;
+    display: flex;
+    margin-top: 1.6rem;
+}
+
+.active {
+    position: relative;
+}
+
+.active::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.2rem;
+    background-color: white;
+    display: flex;
+    margin-top: 1.6rem;
 }
 
 #toggleNavBar {
@@ -33,9 +93,9 @@ header {
     background-color: rgb(0, 0, 0, 0.5);
     position: absolute;
     right: 0px;
-    bottom: 0px;
-    /* border: 1px solid red; */
+    top: 0px;
     display: none;
+    z-index: 1;
 }
 
 #list {
@@ -43,8 +103,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 3rem;
-    /* border: 1px solid red; */
     position: relative;
+    z-index: 99999;
 }
 
 #listOffers {
@@ -54,7 +114,6 @@ header {
 }
 
 #listOffers ul{
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -81,15 +140,14 @@ header {
 
 #hamburger {
     cursor: pointer;
+    display: none;
     
 }
 
 #close {
-    /* display: none; */
     cursor: pointer;
     position: absolute;
     right: 1rem;
-
 }
 
 #container {
@@ -139,6 +197,10 @@ section {
     background-color: white;
 }
 
+#explore:hover {
+    outline: 5rem solid grey;
+}
+
 #btn {
     background-color: transparent;
     border: none;
@@ -148,6 +210,18 @@ section {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 449px) {
+    #hamburger {
+        display: block;
+    }
+  }
+
+@media only screen and (max-width: 450px){
+    #navForTabletAndDesktop {
+        display: none;
+    }
+}
+
 @media only screen and (min-width: 600px) {
     body {
       background-image: url(starter-code/assets/home/background-home-tablet.jpg);
@@ -155,10 +229,82 @@ section {
       background-size: cover;
       background-repeat: no-repeat;
     }
+
+    #container {
+        width: 80%;
+        margin: auto;
+    }
+
+    #question span {
+        font-size: 1.2rem;
+    }
+
+    #destination span {
+        font-size: 9rem;
+    }
+
+    #response p {
+        margin: auto;
+        width: 80%;
+        font-size: 1.05rem;
+    }
+
+    #explore {
+        scale: 1.3;
+    }
+
+    #explore:hover {
+        outline: 2.5rem solid grey;
+    }
+
+    #navForTabletAndDesktop {
+        width: 65%;
+    }
+  }
+
+  @media only screen and (max-width: 552px) {
+    #navForTabletAndDesktop {
+        min-width: 65%;
+    }
   }
 
   @media only screen and (min-width: 900px) {
+    
+    body {
+        background-image: url(starter-code/assets/home/background-home-desktop.jpg);
+    }
+
     #container {
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 15rem;
+        height: 50vh;
+    }
+
+    section {
+        width: 85%;
+        align-items: flex-start;
+    }
+
+    #question {
+        letter-spacing: .25rem;
+    }
+
+    #response p{
+        text-align: left;
+        width: 100%;
+    }
+
+    #explore {
+        scale: 1.5;
+        margin-left: 15rem;
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    section {
+        scale: .9;
+    }
+    #explore {
+        margin-left: 10rem;
     }
   }

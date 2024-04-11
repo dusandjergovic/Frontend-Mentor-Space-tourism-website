@@ -5,28 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="spaceport.css">
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <header>
+    <div id="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+    </div>
+    <nav>
+      <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
+    </nav>
 
-  03 Space launch 101
+    <div id="toggleNavBar">
+      <div id="list">
+        <div id="listOffers">
+          <ul>
+            <li><a href="index.html">00 HOME</a></li>
+            <li><a href="destination-moon.html">01 DESTINATION</a></li>
+            <li><a href="crew-commander.html">02 CREW</a></li>
+            <li><a href="technology-vehicle.html">03 TECHNOLOGY</a></li>
+          </ul>
+        </div>
 
-  1
-  2
-  3
+        <svg id="close" xmlns="http://www.w3.org/2000/svg" width="20" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg>
+      </div>
+    </div>
+  </header>
 
-  The terminology...
-  Spaceport
+  <section id="container">
+    <div id="header">
+      <h3><span>03</span>Space launch 101</h3>
+    </div>
 
-  A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
-  by analogy to the seaport for ships or airport for aircraft. Based in the 
-  famous Cape Canaveral, our spaceport is ideally situated to take advantage 
-  of the Earth’s rotation for launch.
+    <div id="vehicleImg">
+    </div>
+
+    <div id="bullets">
+      <a href="technology-vehicle.html" class="miniBullet">1</a>
+      <a href="technology-spaceport.html " id="defaultBtn" class="miniBullet active">2</a>
+      <a href="technology-capsule.html" class="miniBullet">3</a>
+    </div>
+
+    <div id="vehicleName">
+      <h3>The terminology...</h3>
+      <span>Spaceport</span>
+      <p class="bio">A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+        by analogy to the seaport for ships or airport for aircraft. Based in the 
+        famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+        of the Earth’s rotation for launch.</p>
+    </div>
+
+  </section>  
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="spaceport.js"></script>
 </body>
 </html>
+
+
+
