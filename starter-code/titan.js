@@ -42,6 +42,7 @@ $(document).ready(function() {
         url: 'data.json',
         METHOD: 'GET',
         success: function(response) {
+            $("#textAboutPlanet").text(response.destinations[3].description)
             $(".planetName").text(response.destinations[3].name)
             $('#distanceKm').text(response.destinations[3].distance)
             $('#avgTime').text(response.destinations[3].travel)
