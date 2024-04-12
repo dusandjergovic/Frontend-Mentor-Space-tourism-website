@@ -33,7 +33,7 @@ header {
     background-color: grey;
     position: absolute;
     left: 8rem;
-    display: none;
+    /* display: none; */
 }
 
 #navForTabletAndDesktop {

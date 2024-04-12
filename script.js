@@ -2,7 +2,6 @@ $(document).ready(function() {
 
     $("#hamburger").click(function() {
         $(this).hide();
-        // $("#navForTabletAndDesktop").hide()
         $("#close").show()
         $("#toggleNavBar").show()
         $("#explore").css({
@@ -23,10 +22,10 @@ $(document).ready(function() {
     })
 
     $(window).resize(function() {
-        if($(this).innerWidth() >= 900) {
-            $("#navLine").show();
-        } else {
+        if($(this).innerWidth() < 900) {
             $("#navLine").hide();
+        } else {
+            $("#navLine").show();
         }
     })
 

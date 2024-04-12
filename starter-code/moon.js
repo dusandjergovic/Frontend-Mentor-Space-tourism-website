@@ -11,10 +11,23 @@ $(document).ready(function() {
     $(window).resize(function() {
         if($(this).innerWidth() > 445) {
             $("#toggleNavBar").hide()
+            $("#hamburger").hide()
+            $("#explore").css({
+                'filter': 'blur(0px)'
+            })
         } else if($(this).innerWidth() < 445) {
             $("#hamburger").show()
         }
     })
+    
+    $(window).resize(function() {
+        if($(this).innerWidth() < 900) {
+            $("#navLine").hide();
+        } else {
+            $("#navLine").show();
+        }
+    })
+    
 
     $("#close").click(function() {
         $(this).hide();

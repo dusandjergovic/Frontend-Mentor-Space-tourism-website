@@ -7,6 +7,28 @@ $(document).ready(function() {
             'filter': 'blur(5px)'
         })
     })
+
+    $(window).resize(function() {
+        if($(this).innerWidth() > 445) {
+            $("#toggleNavBar").hide()
+            $("#hamburger").hide()
+            $("#explore").css({
+                'filter': 'blur(0px)'
+            })
+        } else if($(this).innerWidth() < 445) {
+            $("#hamburger").show()
+        }
+    })
+    
+    $(window).resize(function() {
+        if($(this).innerWidth() < 900) {
+            $("#navLine").hide();
+        } else {
+            $("#navLine").show();
+        }
+    })
+    
+
     $("#close").click(function() {
         $(this).hide();
         $("#toggleNavBar").hide()
@@ -20,7 +42,6 @@ $(document).ready(function() {
         url: 'data.json',
         METHOD: 'GET',
         success: function(response) {
-            console.log(response);
             $(".planetName").text(response.destinations[2].name)
             $('#distanceKm').text(response.destinations[2].distance)
             $('#avgTime').text(response.destinations[2].travel)

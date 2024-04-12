@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,76 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="mars.css">
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-    <link rel="stylesheet" href="mars.css">
-    <title>Frontend Mentor | Space tourism website</title>
-  </head>
-  <body>
-  
-    <header>
-      <div id="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
-      </div>
-      <nav>
-        <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
-      </nav>
-  
-      <div id="toggleNavBar">
-        <div id="list">
-          <div id="listOffers">
-            <ul>
-              <li><a href="index.html">00 HOME</a></li>
-              <li><a href="destination-moon.html">01 DESTINATION</a></li>
-              <li><a href="crew-commander.html">02 CREW</a></li>
-              <li><a href="technology-vehicle.html">03 TECHNOLOGY</a></li>
-            </ul>
-          </div>
-  
-          <svg id="close" xmlns="http://www.w3.org/2000/svg" width="20" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg>
-        </div>
-        
-        
-      </div>
-    </header>
-  
-    <section id="container">
-      <div id="header">
-        <h3><span>01</span> Pick your destination</h3>
-      </div>
-  
-      <div id="moonImg">
-        <img src="assets/destination/image-mars.png"  alt="">
-      </div>
-  
-      <div id="selection">
+
+  <header>
+    <div id="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+    </div>
+    <div id="navLine"></div>
+    <nav>
+      <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
+      <div id="navForTabletAndDesktop">
         <ul>
-          <li><a href="destination-moon.html">Moon</a></li>
-          <li><a href="destination-mars.html" class="active">Mars</a></li>
-          <li><a href="destination-europa.html">Europe</a></li>
-          <li><a href="destination-titan.html">Titan</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination-moon.html">Destination</a></li>
+          <li><a href="crew-commander.html">Crew</a></li>
+          <li><a href="technology-vehicle.html">Technology</a></li>
         </ul>
       </div>
-  
-      <div id="planetAndAbout">
-          <h1 class="planetName"></h1>
-  
-          <p id="textAboutPlanet">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
-            the tallest planetary mountain in our solar system. It’s two and a half times 
-            the size of Everest!</p>
-      </div>  
-  
-      <hr>
-  
+    </nav>
+
+    <div id="toggleNavBar">
+      <div id="list">
+        <div id="listOffers">
+          <ul>
+            <li><a href="index.html">00 HOME</a></li>
+            <li><a href="destination-moon.html">01 DESTINATION</a></li>
+            <li><a href="crew-commander.html">02 CREW</a></li>
+            <li><a href="technology-vehicle.html">03 TECHNOLOGY</a></li>
+          </ul>
+        </div>
+
+        <svg id="close" xmlns="http://www.w3.org/2000/svg" width="20" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg>
+      </div>
+      
+      
+    </div>
+  </header>
+
+  <section id="container">
+    <div id="header">
+      <h3><span>01</span> Pick your destination</h3>
+    </div>
+
+    <div id="moonImg">
+      <img src="assets/destination/image-mars.png"  alt="">
+    </div>
+
+    <div id="selection">
+      <ul>
+        <li><a href="destination-moon.html" >Moon</a></li>
+        <li><a href="destination-mars.html" class="active">Mars</a></li>
+        <li><a href="destination-europa.html">Europe</a></li>
+        <li><a href="destination-titan.html">Titan</a></li>
+      </ul>
+    </div>
+
+    <div id="planetAndAbout">
+        <h1 class="planetName"></h1>
+
+        <p id="textAboutPlanet">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+        regain perspective and come back refreshed. While you’re there, take in some history 
+        by visiting the Luna 2 and Apollo 11 landing sites.</p>
+    </div>  
+
+    <hr>
+
+    <div id="info">
       <div id="distance">
         <span id="avgDistance">AVG. DISTANCE</span>
         <span id="distanceKm"></span>
@@ -84,12 +82,11 @@
         <span id="avgTimeTravel">EST. TRAVEL TIME</span>
         <span id="avgTime"></span>
       </div>
-  
-    </section>
-  
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="mars.js"></script>
-  </body>
-  </html>
+    </div>  
+
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="mars.js"></script>
 </body>
 </html>
